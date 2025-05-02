@@ -1,0 +1,40 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <h2>Iniciar sesión</h2>
+    <p>Ingrese datos para acceder:</p>
+    <form action="login/login" method="post" onsubmit="return validateForm()">
+        {% csrf_token %}
+        <p>
+            <label for="username">Usuario:</label>
+            <input type="text" name="username" placeholder="Username" required> 
+            {% if username_error %}
+                 <span class="error-message">{{ username_error }}</span>
+            {% endif %}
+        </p>
+        <p> 
+            <label for="password">Contraseña:</label>
+            <input type="password" name="password" placeholder="Password" required>
+            {% if password_error %}
+                <span class="error-message">{{ password_error }}</span>
+            {% endif %}
+        </p>
+        <p>
+        <button type="submit" >Aceptar</button>
+        </p>
+        <p id="link_reg">
+            <a href="{% url 'registro' %}" id="link_reg">Registrarse</a>
+        </p>
+         
+    </form>
+    
+
+{% endblock %}
+{% block footer %}
+<footer>
+    <!-- Contenido del pie de página -->
+   
+</footer>
+{% endblock %}

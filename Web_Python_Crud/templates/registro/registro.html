@@ -1,0 +1,47 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Registro{% endblock %}
+
+{% block content %}
+<h2>Registro</h2>
+<p>Ingrese los datos para registrarse en la base de datos.</p>
+
+
+<!-- Un único formulario para el registro -->
+<form action="{% url 'registro' %}" method="post" onsubmit="return validateForm()">
+    {% csrf_token %}
+    
+    <!-- Mostrar el formulario renderizado -->
+    <section class="form-container">
+        {{ form.as_p }}  <!-- Este es el renderizado automático del formulario -->
+    </section>
+    <p>
+    <button type="submit">Registrar</button>
+    </p>
+    <p>
+        <a href="{% url 'login' %}">¿Ya tienes cuenta? Iniciar sesión</a>
+    </p>
+
+</form>
+
+{% if form.errors %}
+    <ul class="form-errors">
+        {% for field in form %}
+            {% for error in field.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{% endblock %}
+
+{% block footer %}
+<footer>
+    <!-- Contenido del pie de página -->
+    <p>Pie de página</p>
+</footer>
+{% endblock %}
+
+
+

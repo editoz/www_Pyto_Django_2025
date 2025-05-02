@@ -1,0 +1,195 @@
+
+/* Restablecer márgenes y padding por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Asegúrate de que el body ocupe toda la altura de la ventana */
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal que ocupa todo el alto de la página */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* Esto asegura que el body ocupe todo el alto disponible */
+    padding: 20px;
+    align-items: center;
+    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+}
+
+
+nav {
+
+    display: flex;
+    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+    padding: 10px 0;
+
+}
+
+
+header nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    align-content: space-around;
+}
+
+header nav ul li a {
+    color: rgb(208, 246, 249);
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #c623e6; /* Color al pasar el mouse */
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        padding: 0;
+    }
+}
+
+#container{
+    margin-top:30px;
+    max-width: 800px;
+    background: #6db1de;
+    width: 400px;
+    height: 650px;
+    padding: 25px 40px 10px 40px;
+    border-radius: 17px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+form {
+    display: flex;
+    margin-left: 5px;
+    justify-content: center; 
+    flex-direction: column;
+    max-width: 600px;
+    height: 550px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+form input {
+    inset-block-start: 10px;
+    width: 200px;
+    height: 30px;
+    margin: 15px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input p {
+    display: block;
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+p button[type="submit"] {
+    margin-top: 20px;
+    margin-left: 15px;
+    padding: 10px;
+    width: 80%;
+    background-color: #5fd4c1;
+    color: rgb(12, 3, 3);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+p button[type="submit"]:hover {
+    background-color: #507bd7;
+}
+
+
+    /* Centrar el texto dentro del contenedor p */
+#link_reg {
+    text-align: center; /* Centra el texto en el contenedor p */
+    margin-top: 30px;
+}
+
+a#link_reg {
+    text-decoration: none;  /* Quita el subrayado */
+    margin-top: 20px;
+    
+    color: #007BFF;  /* Color azul */
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-shadow: #444343;
+}
+        
+a#link_reg:hover {
+    background-color: #c623e6; /* Color al pasar el mouse */
+    flex: auto;  /* Esto hace que el main ocupe el espacio restante */
+    color:#fff;
+    padding: 10px;
+    min-height: 1px; /* Ajusta según tus necesidades */
+}
+
+/* Estilos para el pie de página */
+footer {
+    
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p{
+    margin-top:5px;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: #242121;
+    justify-content: center; 
+}
+
+
+footer .social-icons {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaciado entre los íconos */
+    margin-top: 10px;
+}
+
+footer .social-icons a {
+    color: #fff;
+    font-size: 18px; /* Tamaño del ícono */
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    border-radius: 4px;
+    background-color:#c623e6; /* Color al pasar el mouse */; /* Color al pasar el mouse */
+    text-decoration: underline;
+    transform: scale(1.2); /* Efecto de crecimiento */
+}
+
+.social-icon i {
+    margin-right: 5px; /* Espaciado entre el ícono y el texto */
+}
